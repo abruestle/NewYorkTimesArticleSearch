@@ -1,0 +1,53 @@
+/* Background*/
+.intro-2 {
+    background: url("https://mdbootstrap.com/img/Photos/Others/architecture.jpg")no-repeat center center;
+    background-size: cover;
+}
+.jumbotron {
+	padding:10px;
+    background: transparent !important;
+}
+.btn .fa {
+    margin-left: 3px;
+}
+
+@media (max-width: 768px) {
+    .jumbotron {
+        background: #424f95 !important;
+    } 
+}
+h6 {
+    line-height: 1.7;
+}
+.hm-gradient .full-bg-img {
+    background: -moz-linear-gradient(45deg, rgba(42, 27, 161, 0.6), rgba(29, 210, 177, 0.6) 100%);
+    background: -webkit-linear-gradient(45deg, rgba(42, 27, 161, 0.6), rgba(29, 210, 177, 0.6) 100%);
+    background: -webkit-gradient(linear, 45deg, from(rgba(42, 27, 161, 0.6)), to(rgba(29, 210, 177, 0.6)));
+    background: -o-linear-gradient(45deg, rgba(42, 27, 161, 0.6), rgba(29, 210, 177, 0.6) 100%);
+    background: linear-gradient(to 45deg, rgba(42, 27, 161, 0.6), rgba(29, 210, 177, 0.6) 100%); 
+    padding-bottom:20px;
+}
+@media (max-width: 450px) {
+    .margins {
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+}
+@media (max-width: 740px) {
+    .full-height,
+    .full-height body,
+    .full-height header,
+    .full-height header .view {
+        height: 1040px; 
+    } 
+}
+                
+
+/*Our add ons*/
+a {
+	font-size:18px;
+}
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+	vertical-align: middle;
+}
