@@ -67,9 +67,9 @@ function articleSearch() {
       var d = new Date(ajaxOutput.response.docs[i].pub_date);
       var n = d.toLocaleDateString();
       var title = "";
-      if(ajaxOutput.response.docs[i].headline.print_headline == null){
-        if(ajaxOutput.response.docs[i].headline.main == null){
-          title = "Title Unavailable";
+      if(ajaxOutput.response.docs[i].headline.print_headline == null || ajaxOutput.response.docs[i].headline.print_headline == ""){
+        if(ajaxOutput.response.docs[i].headline.main == null || ajaxOutput.response.docs[i].headline.main == ""){
+          title = "View Article";
         }
         else{
           title = ajaxOutput.response.docs[i].headline.main;
