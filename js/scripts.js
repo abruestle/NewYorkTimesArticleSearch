@@ -1,5 +1,5 @@
 // Empty JS for your own code to be here
-var sort = "newest";
+var sort = "";
 
 
 
@@ -31,7 +31,7 @@ function articleSearch() {
 
 
    //endDate
-   if($("#endDate > .form-control").val() == ""){
+  if($("#endDate > .form-control").val() == ""){
   	console.log("no end_date");
   }
   else{
@@ -39,7 +39,13 @@ function articleSearch() {
   }
    console.log($("#endDate > .form-control").val())
 
-
+  if(sort === ""){
+    console.log("by relavence");
+  }
+  else{
+    queryObj.sort = sort;
+    console.log("sort by " + sort);
+  }
 
  
 
@@ -128,6 +134,7 @@ $("body").on("click", "#sortBy ul li a", function(){
     console.log(this);
     $("#sortText").text($(this).text());
     $("#sortText").val($(this).val());
-    sort = $(this).val();
+    sort = $(this).attr("value");
+    console.log(sort);
 });
 
