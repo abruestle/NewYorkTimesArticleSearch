@@ -66,8 +66,21 @@ function articleSearch() {
   		}
       var d = new Date(ajaxOutput.response.docs[i].pub_date);
       var n = d.toLocaleDateString();
+      var title = "";
+      if(ajaxOutput.response.docs[i].headline.print_headline == null){
+        if(ajaxOutput.response.docs[i].headline.main == null){
+          title = "Title Unavailable";
+        }
+        else{
+          title = ajaxOutput.response.docs[i].headline.main;
+        }
+      }
+      else{
+        title = ajaxOutput.response.docs[i].headline.print_headline;
+      }
+
       console.log(n);
-  		$("#outputTable").append("<tr><th>" +parseInt(i+1) +"</th><th><a href='"+ ajaxOutput.response.docs[i].web_url+"'>" + ajaxOutput.response.docs[i].headline.print_headline + "</a></th><th>" + temp + "</th><th>" + n + "</th><th>" + ajaxOutput.response.docs[i].snippet+ "</th></tr>");
+  		$("#outputTable").append("<tr><th>" +parseInt(i+1) +"</th><th><a href='"+ ajaxOutput.response.docs[i].web_url+"'>" + title + "</a></th><th>" + temp + "</th><th>" + n + "</th><th>" + ajaxOutput.response.docs[i].snippet+ "</th></tr>");
   		console.log("<tr><th>" + parseInt(i+1) +"</th><th><a href='"+ ajaxOutput.response.docs[i].web_url+"'>" + ajaxOutput.response.docs[i].headline.print_headline + "</a></th><th>" + temp + "</th><th>" + n + "</th><th>" + ajaxOutput.response.docs[i].snippet+ "</th></tr>");
   	}
 
